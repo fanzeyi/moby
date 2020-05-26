@@ -149,6 +149,7 @@ type ImageBuildOptions struct {
 	ForceRemove    bool
 	PullParent     bool
 	Isolation      container.Isolation
+	CPUCount       int64
 	CPUSetCPUs     string
 	CPUSetMems     string
 	CPUShares      int64

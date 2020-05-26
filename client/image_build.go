@@ -88,6 +88,7 @@ func (cli *Client) imageBuildOptionsToQuery(options types.ImageBuildOptions) (ur
 	query.Set("cpusetcpus", options.CPUSetCPUs)
 	query.Set("networkmode", options.NetworkMode)
 	query.Set("cpusetmems", options.CPUSetMems)
+	query.Set("cpucount", strconv.FormatInt(options.CPUCount, 10))
 	query.Set("cpushares", strconv.FormatInt(options.CPUShares, 10))
 	query.Set("cpuquota", strconv.FormatInt(options.CPUQuota, 10))
 	query.Set("cpuperiod", strconv.FormatInt(options.CPUPeriod, 10))

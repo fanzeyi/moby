@@ -46,6 +46,7 @@ func newImageBuildOptions(ctx context.Context, r *http.Request) (*types.ImageBui
 		ForceRemove:    httputils.BoolValue(r, "forcerm"),
 		MemorySwap:     httputils.Int64ValueOrZero(r, "memswap"),
 		Memory:         httputils.Int64ValueOrZero(r, "memory"),
+		CPUCount:       httputils.Int64ValueOrZero(r, "cpucount"),
 		CPUShares:      httputils.Int64ValueOrZero(r, "cpushares"),
 		CPUPeriod:      httputils.Int64ValueOrZero(r, "cpuperiod"),
 		CPUQuota:       httputils.Int64ValueOrZero(r, "cpuquota"),

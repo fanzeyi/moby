@@ -465,6 +465,7 @@ func (b *Builder) create(runConfig *container.Config) (string, error) {
 func hostConfigFromOptions(options *types.ImageBuildOptions, isWCOW bool) *container.HostConfig {
 	resources := container.Resources{
 		CgroupParent: options.CgroupParent,
+		CPUCount:     options.CPUCount,
 		CPUShares:    options.CPUShares,
 		CPUPeriod:    options.CPUPeriod,
 		CPUQuota:     options.CPUQuota,
